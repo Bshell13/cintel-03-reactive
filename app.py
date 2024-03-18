@@ -112,4 +112,4 @@ with ui.navset_card_tab(id="tab"):
 
 @reactive.calc
 def filtered_data():
-    return penguins_df
+    return penguins_df[penguins_df["species"].isin(input.selected_species_list())]
